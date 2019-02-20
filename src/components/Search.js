@@ -28,8 +28,9 @@ export function Search({ defaultValue, onChange, messages, loading, cancel }) {
         ]}
         onChange={(evt,item) => onChange(item.key)}
       />
+      <PrimaryButton text="Get Lists" onClick={cancel}/>
       {loading && (
-        <PrimaryButton text="Get Lists" onClick={cancel}/>
+        <PrimaryButton text="Clear Lists" onClick={cancel}/>
       )}
       {messages.length > 0 && (
         <ul>
