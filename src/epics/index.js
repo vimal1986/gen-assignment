@@ -2,8 +2,8 @@ import {Observable} from 'rxjs';
 import {combineEpics} from 'redux-observable';
 import {CANCEL_SEARCH, receiveBeers, searchBeersError, searchBeersLoading, SEARCHED_BEERS} from "../actions/index";
 
-const beers  = `https://api.punkapi.com/v2/beers`;
-const search = (term) => `${beers}?beer_name=${encodeURIComponent(term)}`;
+const beers  = `https://reqres.in/api/users/`;
+const search = (term) => `${beers}/${term}`;
 
 export function searchBeersEpic(action$, store, deps) {
   return action$.ofType(SEARCHED_BEERS)
